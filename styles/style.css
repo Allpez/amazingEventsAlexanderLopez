@@ -1,4 +1,37 @@
+.div_header {
+ 
+    
+}
+.main {
+    background-color: #dcfcf3;
+}
+.color {
+    background-color: #84dbbe;
+}
+
+.img_carousel {
+    width: 50rem;
+    height: 30vh;
+}
+
+.card {
+    width: 18rem;
+}
+
 .img-logo {
+    width: 30%;
+}
+
+.icon {
+    width: 10%;
+    height: 10vh;
+}
+
+.img_footer {
     width: 20%;
-    height: 50%;
+    height: 10vh;
+}
+
+.img {
+    width: 300%;
 }
