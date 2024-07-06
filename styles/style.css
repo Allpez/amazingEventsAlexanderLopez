@@ -1,12 +1,10 @@
 .div_header {
- 
-    
+    min-height: 7vh;
+    background-color: #5fe9ca;
 }
-.main {
+.div_main {
     background-color: #dcfcf3;
-}
-.color {
-    background-color: #84dbbe;
+
 }
 
 .img_carousel {
@@ -16,6 +14,21 @@
 
 .card {
     width: 18rem;
+    background-color: #9af5de;
+}
+
+.h5 {
+    background-color: rgba(95, 233, 202, 0.6);
+    border-radius: 50px;
+    border: 1px solid green;
+  }
+
+.button_card {
+    background-color: #125d54;
+    color: #ffffff;
+}
+
+.input {
 }
 
 .img-logo {
@@ -28,10 +41,47 @@
 }
 
 .img_footer {
-    width: 20%;
-    height: 10vh;
+    width: 70%;
+    height: 6vh;
 }
 
 .img {
-    width: 300%;
+    width: 90%;
+    height: 5vh;
+}
+
+.p {
+    color: #107566;
+    font-size: 0.7rem;
+}
+
+.arrow {
+    font-size: 2.5rem;
+    color: #042f2b;
+}
+
+.div_footer {
+    background-color: #5fe9ca;
+    height: 10vh;
+}
+
+@media only screen and (min-width: 579px){
+    .arrow {
+        display: none;
+    }
+    .img-logo {
+        width: 10%;
+    }
+    
+
+}
+
+@media only screen and (min-width: 769px){
+    .input {
+        width: 18%;
+    }
+    .input2 {
+        width: 50%; 
+    }
+
 }

@@ -16,18 +16,18 @@
 </head>
 
 <body>
-    <div class="d-flex min-vh-100 flex-column color">
-        <header class="div_header color">
-            <nav class="navbar navbar-expand-sm">
-                <div class="container-fluid">
-                    <a class="d-flex" href="#"><img class="img-logo" src="./images/amazing_brand.png"
-                            alt="logoA_Events"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <div class="d-flex min-vh-100 flex-column">
+        <header class="div_header container-fluid color div_header">
+            <nav class="navbar container-fluid row navbar-expand-sm w-100">
+                <a class="d-flex justify-content-center col col-sm-3" href="#"><img class="img-logo w-75"
+                        src="./images/amazing_brand.png" alt="logoA_Events"></a>
+                <div class="container-fluid justify-content-end pe-1 col col-sm-9">
+                    <button class="navbar-toggler col-sm-9" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse col-sm-9 justify-content-end" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                             <a class="nav-link" href="./pages/upcomingEvents.html">Upcoming Events</a>
@@ -39,50 +39,59 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-grow-1 main container justify-content-center">
+        <main class="flex-grow-1 div_main justify-content-center">
             <section id="carouselAmazingEvents" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner w-100">
-                    <div class="carousel-item active">
-                        <a href="./pages/home.html"><img src="./images/optional_banner_1.jpg"
-                                class="d-block img_carousel w-100" alt="banner_home"></a>
-                        <div class="carousel-caption d-none d-sm-block">
-                            <h5>HOME</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                    <a href="./pages/home.html">
+                        <div class="carousel-item active">
+                            <img src="./images/optional_banner_1.jpg" class="d-block img_carousel w-100"
+                                alt="banner_home">
+                            <div class="carousel-caption d-sm-block">
+                                <h5 class="h5 text-center">HOME</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="./pages/upcomingEvents.html"><img src="./images/optional_banner_2.jpg"
-                                class="d-block img_carousel w-100" alt="banner_upcomingEvents"></a>
-                        <div class="carousel-caption d-none d-sm-block">
-                            <h5>UPCOMING EVENTS</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                    </a>
+                    <a href="./pages/upcomingEvents.html">
+                        <div class="carousel-item">
+                            <img src="./images/optional_banner_2.jpg" class="d-block img_carousel w-100"
+                                alt="banner_upcomingEvents">
+                            <div class="carousel-caption d-sm-block">
+                                <h5 class="h5">UPCOMING EVENTS</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="./pages/pastEventes.html"><img src="./images/optional_banner_3.jpg"
-                                class="d-block img_carousel w-100" alt="banner_1"></a>
-                        <div class="carousel-caption d-none d-sm-block">
-                            <h5>PAST EVENTS</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                    </a>
+                    <a href="./pages/pastEventes.html">
+                        <div class="carousel-item">
+                            <img src="./images/optional_banner_3.jpg" class="d-block img_carousel w-100" alt="banner_1">
+                            <div class="carousel-caption d-sm-block">
+                                <h5 class="h5">PAST EVENTS</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="./pages/contact.html"><img src="./images/optional_banner_4.jpg"
-                                class="d-block img_carousel w-100" alt="banner_contact"></a>
-                        <div class="carousel-caption d-none d-sm-block">
-                            <h5>CONTACT</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                    </a>
+                    <a href="./pages/contact.html">
+                        <div class="carousel-item">
+                            <img src="./images/optional_banner_4.jpg" class="d-block img_carousel w-100"
+                                alt="banner_contact">
+                            <div class="carousel-caption d-sm-block">
+                                <h5 class="h5">CONTACT</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="./pages/stats.html"><img src="./images/optional_banner_5.jpg"
-                                class="d-block img_carousel w-100" alt="banner_stats"></a>
-                        <div class="carousel-caption d-none d-sm-block">
-                            <h5>Stats</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
+                    </a>
+                    <a href="./pages/stats.html">
+                        <div class="carousel-item">
+                            <img src="./images/optional_banner_5.jpg" class="d-block img_carousel w-100"
+                                alt="banner_stats">
+                            <div class="carousel-caption d-sm-block">
+                                <h5 class="h5">Stats</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
 
+                        </div>
+                    </a>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazingEvents"
                     data-bs-slide="prev">
@@ -96,37 +105,37 @@
                 </button>
             </section>
 
-            <div class="inputs d-flex container flex-wrap mt-3">
-                <div class="d-flex w-75">
-                    <div class="form-check form-check-inline">
+            <section class="inputs container-fluid flex-column d-flex mt-3">
+                <div class="row container-fluid justify-content-between ps-5">
+                    <div class="form-check form-check-inline col-sm-1 input">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                         <label class="form-check-label" for="inlineCheckbox1">Outside Activities</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-sm-1 input">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                         <label class="form-check-label" for="inlineCheckbox1">Indoor Activities</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-sm-1 input">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
                         <label class="form-check-label" for="inlineCheckbox2">Gastronomy</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-sm-1 input">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
                         <label class="form-check-label" for="inlineCheckbox2">Entertainment</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-sm-1 input">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-                        <label class="form-check-label" for="inlineCheckbox3">culture (disabled)</label>
+                        <label class="form-check-label" for="inlineCheckbox3">culture<br>(not available)</label>
                     </div>
                 </div>
-                <div class="input-group mb-3 d-flex w-25">
+                <div class="input-group mb-3 container input2">
                     <input type="text" class="form-control" placeholder="Chosse the category"
                         aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
                 </div>
-            </div>
+            </section>
 
-            <section class="cards container w-100 justify-content-center row my-3 gap-4">
+            <section class="cards container-fluid w-100 justify-content-center row my-3 gap-4 ps-5">
                 <article class="card">
                     <img src="./images/costume_party.jpg" class="card-img-top" alt="costume_party">
                     <div class="card-body col-sm-8">
@@ -134,7 +143,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
                 <article class="card">
@@ -144,7 +153,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
                 <article class="card">
@@ -154,7 +163,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
                 <article class="card">
@@ -164,7 +173,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
                 <article class="card">
@@ -174,7 +183,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
                 <article class="card">
@@ -184,7 +193,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
                 <article class="card">
@@ -194,19 +203,25 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn button_card">Go somewhere</a>
                     </div>
                 </article>
             </section>
+
+            <a href="#" class="d-flex p-3 justify-content-end"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
         </main>
-        <footer class="d-flex justify-content-between px-5 color align-items-center">
-            <div class="navbar-nav d-flex justify-content-between flex-row w-25">
-                <a class="nav-link icon" href="https://www.instagram.com/"><img src="./images/instagram.png" class="img" alt="instagramPage"></a>
-                <a class="nav-link icon" href="https://about.meta.com/ltam/technologies/facebook-app/"><img src="./images/facebook.png" class="img" alt="faceBookPage"></a>
-                <a class="nav-link icon" aria-current="page" href="https://www.whatsapp.com/"><img src="./images/whatsapp.png" class="img" alt="whatsAppPage"></a>
+        <footer class="div_footer d-flex">
+            <div class="navbar-nav d-flex justify-content-between align-items-center flex-row px-2 pt-2 w-100 gap-2">
+                <a class="nav-link icon" href="https://www.instagram.com/" target="_blank"
+                    rel="noopener noreferrerr"><img src="./images/instagram.png" class="img" alt="instagramPage"></a>
+                <a class="nav-link icon" href="https://about.meta.com/ltam/technologies/facebook-app/" target="_blank"
+                    rel="noopener noreferrerr"><img src="./images/facebook.png" class="img" alt="faceBookPage"></a>
+                <a class="nav-link icon" aria-current="page" href="https://www.whatsapp.com/" target="_blank"
+                    rel="noopener noreferrerr"><img src="./images/whatsapp.png" class="img" alt="whatsAppPage"></a>
+                <p class="p text-center">Created by<br>Alexander López &#169<br>CoHort-RappiV</p>
+                <a href="https://mindhubweb.com/" target="_blank" rel="noopener noreferrerr"><img class="img_footer"
+                        src="./images/Mindhub-white-logo.png" alt="logo-mindHub"></a>
             </div>
-            <h5>RappiV</h5>
-            <!--         <img class="img_footer" src="./images/Mindhub-logo.png" alt="logo-mindHub">-->
         </footer>
     </div>
 
