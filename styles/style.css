@@ -5,28 +5,23 @@
 
 .div_main {
     background-color: #dcfcf3;
-
 }
-
 
 .img_carousel {
     width: 50rem;
     height: 30vh;
 }
 
-.cards {
+/* .cards {
     height: 10vh;
-}
+} */
 
 .card {
-    width: 300px;
-    height: 30vh;
     background-color: #9af5de;
 }
 
 .card-img-top {
     height: 50%;
-
 }
 
 .card-body {
@@ -56,17 +51,40 @@
 
 .img_footer {
     width: 70%;
-    height: 6vh;
+    height: 4vh;
 }
 
-.inputs {
+/* .inputs {
     height: 10vh;
+} */
+
+.card_det {
+    max-width: 540px;
+    height: 250px;
 }
 
 .p {
     color: #107566;
     font-size: 0.7rem;
 }
+
+table {
+    background-color: black;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: black;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr, td {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
 
 .arrow {
     font-size: 2.5rem;
@@ -75,7 +93,7 @@
 
 .div_footer {
     background-color: #5fe9ca;
-    max-height: 15vh;
+    max-height: 8vh;
 }
 
 @media only screen and (min-width: 579px) {
@@ -88,17 +106,13 @@
     }
 }
 
-
-
-
 @media only screen and (min-width: 577px) {
     .layout {
-    display: flex;
-    align-items: center;
-    background-color: #ecf7f4;
+        display: flex;
+        align-items: center;
+        background-color: #ecf7f4;
     }
 }
-
 
 @media only screen and (min-width: 768px) {
     .div_footer {
