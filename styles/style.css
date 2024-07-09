@@ -12,19 +12,17 @@
     height: 30vh;
 }
 
-/* .cards {
-    height: 10vh;
-} */
-
 .card {
     background-color: #9af5de;
     border: 2px solid #125d54;
     border-radius: 25px;
-    height: 25rem;
+    height:18rem;
 }
 
 .card-img-top {
-    height: 50%;
+    height: 45%;
+    border-radius: 25px;
+
 }
 
 .card-body {
@@ -51,7 +49,6 @@
     width: 30%;
 }
 
-
 .card-text {
     font-size: 0.8rem;
 }
@@ -69,13 +66,9 @@
 .p {
     color: #107566;
     font-size: 0.7rem;
+    margin: 6px;
 }
 
-table {
-    background-color: black;
-    border: 2px solid black;
-    border-collapse: collapse;
-}
 
 th {
     background-color: black;
@@ -88,6 +81,9 @@ tr, td {
     border: 2px solid black;
 }
 
+.btn {
+    align-self: center;
+}
 
 .arrow {
     font-size: 2.5rem;
@@ -126,5 +122,13 @@ tr, td {
         height: 12vh;
     }
 
+    .card {
+        height:20rem;
+    }
+}
 
+@media only screen and (min-width: 1000px) {
+    .card {
+        height:25rem;
+    }
 }
