@@ -18,6 +18,9 @@
 
 .card {
     background-color: #9af5de;
+    border: 2px solid #125d54;
+    border-radius: 25px;
+    height: 25rem;
 }
 
 .card-img-top {
@@ -49,14 +52,14 @@
 }
 
 
+.card-text {
+    font-size: 0.8rem;
+}
+
 .img_footer {
     width: 70%;
     height: 4vh;
 }
-
-/* .inputs {
-    height: 10vh;
-} */
 
 .card_det {
     max-width: 540px;
@@ -91,9 +94,13 @@ tr, td {
     color: #0d554e;
 }
 
+.navbar-bar {
+    height: 8vh;
+}
+
 .div_footer {
     background-color: #5fe9ca;
-    max-height: 8vh;
+    max-height: 30vh;
 }
 
 @media only screen and (min-width: 579px) {
