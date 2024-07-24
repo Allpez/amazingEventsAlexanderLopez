@@ -20,9 +20,33 @@
 }
 
 .card-img-top {
+    margin-top: 10px;
     height: 45%;
     border-radius: 25px;
+    align-items: center;
+}
 
+.card-img {
+    width: 120%;
+    height: 20vh;
+    align-self: center;
+    border-radius: 15px 15px 0 0 ;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    background-color: rgba(95, 233, 202, 0.6);
+    border: 1px solid green;
+    border-radius: 15px;
+
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
 }
 
 .card-body {
@@ -34,11 +58,13 @@
     background-color: rgba(95, 233, 202, 0.6);
     border-radius: 50px;
     border: 1px solid green;
+    width: 100%;
 }
 
 .button_card {
     background-color: #125d54;
     color: #ffffff;
+    margin-bottom: 20px;
 }
 .img {
     width: 50%;
