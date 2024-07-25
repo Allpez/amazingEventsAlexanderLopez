@@ -195,12 +195,14 @@ const data = {
     ],
 };
 
-let contenedor = document.getElementById("contenedor")
 
 for (let i = 0; i < data.events.length; i++) { //recorres el arreglo 
-    let tarjeta = document.createElement("div") //crear nueva tarjeta
-    tarjeta.className = "tarjeta " //Agregar clase tarjeta para adquirir estilos
-    tarjeta.innerHTML = `
+
+    let contenedor = document.getElementById("contenedor")
+    if (data.currentDate < (data.events[i].date)) {
+        let tarjeta = document.createElement("div") //crear nueva tarjeta
+        tarjeta.className = "tarjeta" //Agregar clase tarjeta para adquirir estilos
+        tarjeta.innerHTML = `
         <img class="card-img" src="${data.events[i].image}">
         <div class="card-body p-1">
             <h5 class="card-title">${data.events[i].name}</h5>
@@ -211,7 +213,7 @@ for (let i = 0; i < data.events.length; i++) { //recorres el arreglo
             </div>
         </div>` //contenido de las tarjetas.
 
-    console.log(tarjeta)
+        contenedor.appendChild(tarjeta) //Agregar lña tarjeta al contenedor.
+    }
 
-    contenedor.appendChild(tarjeta) //Agregar lña tarjeta al contenedor.
 }
