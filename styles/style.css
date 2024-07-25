@@ -163,7 +163,7 @@ tr, td {
 
 @media only screen and (min-width: 768px) {
     .div_footer {
-        height: 12vh;
+        height: 8vh;
     }
 
     .card {
