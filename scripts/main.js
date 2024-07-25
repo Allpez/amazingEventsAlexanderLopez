@@ -207,11 +207,9 @@ for (let i = 0; i < data.events.length; i++) { //recorres el arreglo
             <p class="card-text">${data.events[i].description}</p>
             <div class="d-flex justify-content-between align-items-center mt-auto">
                 <p>${data.events[i].price} $</p>
-                <a href="#" class="btn button_card">Details</a>
+                <a href="./pages/details.html" class="btn button_card">Details</a>
             </div>
         </div>` //contenido de las tarjetas.
 
-    console.log(tarjeta)
-
-    contenedor.appendChild(tarjeta) //Agregar lña tarjeta al contenedor.
+    contenedor.appendChild(tarjeta) //Agregar la tarjeta al contenedor.
 }
