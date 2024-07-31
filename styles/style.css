@@ -30,7 +30,10 @@
     width: 111%;
     height: 25vh;
     align-self: center;
-    border-radius: 15px 15px 0 0 ;
+    border-radius: 13px 13px 0 0 ;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(20, 48, 42, 0.6);
+
 }
 
 .tarjeta {
@@ -41,7 +44,6 @@
     border: 2px solid rgba(20, 48, 42, 0.6);
     border-radius: 15px;
     z-index: 1;
-
 }
 
 .div-select {
@@ -162,9 +164,14 @@ tr, td {
 
 @media only screen and (min-width: 768px) {
     .div_footer {
-        height: 8vh;
+        height: 10vh;
     }
 
+    .img_carousel {
+        width: 50rem;
+        height: 40vh;
+    }
+  
     .card {
         height:20rem;
     }
