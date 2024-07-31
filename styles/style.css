@@ -86,10 +86,8 @@
     margin-bottom: 20px;
 }
 .img {
-    width: 50%;
-    height: 5vh;
-    border: 2px solid green;
-    border-radius: 15px;
+    width: 60%;
+    height: 6vh;
 }
 
 .img-logo {
