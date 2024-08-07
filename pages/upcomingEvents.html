@@ -33,7 +33,6 @@
                             <a class="nav-link active" aria-current="page" href="#">Upcoming Events</a>
                             <a class="nav-link" href="../pages/pastEventes.html">Past Events</a>
                             <a class="nav-link" href="../pages/contact.html">Contact</a> 
-                            <a class="nav-link" href="../pages/details.html">Details</a>
                             <a class="nav-link" href="../pages/stats.html">Stats</a>
                         </div>
                     </div>
@@ -111,39 +110,9 @@
                 </button>
             </section>
 
-            <section class="inputs container-fluid flex-column d-flex  mb-5 mt-3">
-                <div class="row justify-content-center px-3">
-                    <div class="form-check form-check-inline col-9 col-sm input">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Outside Activities</label>
-                    </div>
-                    <div class="form-check form-check-inline col-9 col-sm input">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox2">Indoor Activities</label>
-                    </div>
-                    <div class="form-check form-check-inline col-9 col-sm input">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">Gastronomy</label>
-                    </div>
-                    <div class="form-check form-check-inline col-9 col-sm input">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox4">Entertainment</label>
-                    </div>
-                    <div class="form-check form-check-inline col-9 col-sm input">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option3" disabled>
-                        <label class="form-check-label" for="inlineCheckbox5">culture</label>
-                    </div>
-                    <div class="input-group col-9 col input2 div-select">
-                        <input type="text" class="form-control" placeholder="Chosse the category"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contenedor" class="cards row my-3 w-100 gap-5 justify-content-center">
-            </section>
-
+            <div id="inputs" class="inputs container-fluid flex-column d-flex mb-3 mt-3 w-50"></div>    
+            <input type="text" id="search" placeholder="Search for events." class="form-control-lg mb-3 w-50">
+            <div id="contenedor" class="cards row my-3 gap-3 justify-content-center"></div>
             <a href="#" class="d-flex p-3 justify-content-end"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
         </main>
         <footer class="div_footer container-fluid">
