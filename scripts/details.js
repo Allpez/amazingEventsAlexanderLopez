@@ -196,77 +196,46 @@ const data = {
 };
 
 
-const contenedor = document.getElementById("contenedor");
-const checkboxContainer = document.getElementById("inputs");
-const searchInput = document.getElementById("search");
 
-// Función para crear los checkboxes de categorías
-function createCategoryCheckboxes() {
-    const categories = [...new Set(data.events.map(event => event.category))];
-    checkboxContainer.innerHTML = '';
+const url = window.location.search;
+const urlObjeto = new URLSearchParams(url);
 
-    categories.forEach(category => {
-        const checkbox = document.createElement('div');
-        checkbox.className = 'form-check';
-        checkbox.innerHTML = `
-            <input class="form-check-input" type="checkbox" value="${category}" id="${category}">
-            <label class="form-check-label" for="${category}">${category}</label>
+const eventId = urlObjeto.get('id')
+
+if (eventId) {
+    const event = data.events.find(e => e._id === eventId);
+    console.log(event);
+
+
+    if (event) {
+        const cardContainer = document.getElementById("card-container"); // Asegúrate de que tienes un contenedor con este id en tu HTML
+        const cardContent = document.createElement("div");
+        cardContent.className = "tarjeta";
+
+        cardContent.innerHTML = `
+        <div class="row tarjeta">
+            <div class="col-md-4">
+                <img class="card-img" src="${event.image}" alt="${event.name}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="name d-card">${event.name}</h5>
+                    <p class="date d-card">${event.date}</p>
+                    <p class="description d-card">${event.description}</p>
+                    <p class="category d-card">${event.category}</p>
+                    <p class="place d-card">${event.place}</p>
+                    <p class="capacity d-card">Capacity: ${event.capacity}</p>
+                    <p class="estimate d-card">Estimate: ${event.estimate ? event.estimate : 'N/A'}</p>
+                    <p class="price d-card">Price: ${event.price} $</p>
+                </div>
+            </div>
+        </div>
         `;
-        checkboxContainer.appendChild(checkbox);
-    });
 
-    
-    // Añadir el evento de cambio a cada checkbox
-    checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', filterEvents);
-    });
+        cardContainer.appendChild(cardContent);
+    } else {
+        console.log("Evento no encontrado");
+    }
+} else {
+    console.log("No se proporcionó ningún ID de evento en la URL");
 }
-
-
-
-
-// Función para filtrar y mostrar eventos
-function filterEvents() {
-    // Obtener categorías seleccionadas
-    const selectedCategories = Array.from(checkboxContainer.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
-
-    // Obtener el texto de búsqueda
-    const searchText = searchInput.value.toLowerCase();
-
-    // Limpiar el contenedor
-    contenedor.innerHTML = '';
-
-    // Filtrar eventos según las categorías seleccionadas y el texto de búsqueda
-    const filteredEvents = data.events.filter(event => {
-        const isCategoryMatch = selectedCategories.length === 0 || selectedCategories.includes(event.category);
-        const isSearchMatch = event.name.toLowerCase().includes(searchText) || event.description.toLowerCase().includes(searchText) || event.price.toString().includes(searchText);
-        const isDateMatch = data.currentDate > event.date;
-        return isCategoryMatch && isSearchMatch && isDateMatch;
-    });
-
-
-    // Mostrar los eventos filtrados
-        filteredEvents.forEach(event => {
-            let tarjeta = document.createElement("div");
-            tarjeta.className = "tarjeta";
-            tarjeta.innerHTML = `
-                <img class="card-img" src="${event.image}">
-                <div class="card-body p-1">
-                    <h5 class="card-title">${event.name}</h5>
-                    <p class="card-text">${event.description}</p>
-                    <div class="d-flex justify-content-between align-items-center mt-auto">
-                        <p>${event.price} $</p>
-                        <a href="./details.html?id=${event._id}" class="btn button_card">Details</a>
-                    </div>
-                </div>`;
-            contenedor.appendChild(tarjeta);
-        });
-}
-
-// Añadir el evento de entrada al campo de búsqueda
-searchInput.addEventListener('input', filterEvents);
-
-// Inicializar checkboxes y eventos
-createCategoryCheckboxes();
-filterEvents(); // Mostrar eventos al cargar la página
-

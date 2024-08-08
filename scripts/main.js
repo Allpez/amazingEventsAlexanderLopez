@@ -214,8 +214,7 @@ function createCategoryCheckboxes() {
         checkboxContainer.appendChild(checkbox);
     });
 
-    
-    // Añadir el evento de cambio a cada checkbox
+        // Añadir el evento de cambio a cada checkbox
     checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
         checkbox.addEventListener('change', filterEvents);
     });
@@ -250,7 +249,7 @@ function filterEvents() {
                 <p class="card-text">${event.description}</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                     <p>${event.price} $</p>
-                    <a href="./pages/details.html" class="btn button_card">Details</a>
+                    <a href="./pages/details.html?id=${event._id}" class="btn button_card">Details</a>
                 </div>
             </div>`;
         contenedor.appendChild(tarjeta);
