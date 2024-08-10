@@ -195,9 +195,10 @@ const data = {
     ],
 };
 
-const contenedor = document.getElementById("contenedor");
+const cardContainer = document.getElementById("card-container");
 const checkboxContainer = document.getElementById("inputs");
 const searchInput = document.getElementById("search");
+const searchButton = document.getElementById("searchButton");
 
 // Función para crear los checkboxes de categorías
 function createCategoryCheckboxes() {
@@ -209,12 +210,12 @@ function createCategoryCheckboxes() {
         checkbox.className = 'form-check';
         checkbox.innerHTML = `
             <input class="form-check-input" type="checkbox" value="${category}" id="${category}">
-            <label class="form-check-label" for="${category}">${category}</label>
+            <label class="form-check-label" for="${category}"><span class="p">${category}</span></label>
         `;
         checkboxContainer.appendChild(checkbox);
     });
 
-        // Añadir el evento de cambio a cada checkbox
+    // Añadir el evento de cambio a cada checkbox
     checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
         checkbox.addEventListener('change', filterEvents);
     });
@@ -229,7 +230,7 @@ function filterEvents() {
     const searchText = searchInput.value.toLowerCase();
 
     // Limpiar el contenedor
-    contenedor.innerHTML = '';
+    cardContainer.innerHTML = '';
 
     // Filtrar eventos según las categorías seleccionadas y el texto de búsqueda
     const filteredEvents = data.events.filter(event => {
@@ -239,27 +240,33 @@ function filterEvents() {
     });
 
     // Mostrar los eventos filtrados
-    filteredEvents.forEach(event => {
-        let tarjeta = document.createElement("div");
-        tarjeta.className = "tarjeta";
-        tarjeta.innerHTML = `
+        if (filteredEvents.length === 0) {
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'no-results-message text-center';
+            noResultsMessage.innerHTML = '<H2 class"text-success">No se encontraron resultados.</H2><p class"text-success-emphasis">Por favor intenta con una nueva busqueda.</p>';
+            cardContainer.appendChild(noResultsMessage);
+    }else{
+        filteredEvents.forEach(event => {
+            let card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
             <img class="card-img" src="${event.image}">
-            <div class="card-body p-1">
-                <h5 class="card-title">${event.name}</h5>
-                <p class="card-text">${event.description}</p>
-                <div class="d-flex justify-content-between align-items-center mt-auto">
-                    <p>${event.price} $</p>
-                    <a href="./pages/details.html?id=${event._id}" class="btn button_card">Details</a>
-                </div>
+            <div class="card-body p-1 mt-2">
+            <h5 class="card-title">${event.name}</h5>
+            <p class="card-text">${event.description}</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+            <p>${event.price} $</p>
+            <a href="./pages/details.html?id=${event._id}" class="btn button_card">Details</a>
+            </div>
             </div>`;
-        contenedor.appendChild(tarjeta);
-    });
+            cardContainer.appendChild(card);
+        });
+    }
 }
 
-// Añadir el evento de entrada al campo de búsqueda
-searchInput.addEventListener('input', filterEvents);
+// Añadir el evento de entrada al boton de busqueda.
+searchButton.addEventListener('click', filterEvents);
 
 // Inicializar checkboxes y eventos
 createCategoryCheckboxes();
 filterEvents(); // Mostrar eventos al cargar la página
-

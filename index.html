@@ -41,7 +41,7 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-grow-1 col col-xl-11 div_main">
+        <main class="flex-grow-1 col col-xl-11 div_main container-fluid">
             <div id="carouselAmazingEvents" class="carousel container-lg" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <a href="#">
@@ -111,27 +111,37 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <div class="d-flex row px-4 justify-content-center pt-2 col col-sm-10">
+                <div id="inputs" class="d-flex flex-wrap gap-1 col-sm-10 align-items-center"></div>
+                <div class="d-flex justify-content-center align-items-center col-md-4 col-sm-12">
+                    <input type="text" id="search" placeholder="Search for events."
+                        class="form-control border-success border-2 m-2 col-md-8 ">
+                    <button class="btn btn-outline-secondary border-success border-2 col-md-2 col-sm-auto" type="button" id="searchButton">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <a href="#" class="div_arrow"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
+            <div id="card-container" class="cards row my-3 gap-3 justify-content-center"></div>
 
-            <div id="inputs" class="inputs container-fluid flex-column d-flex mb-3 mt-3 w-50"></div>    
-            <input type="text" id="search" placeholder="Search for events." class="form-control mb-3 w-50">
-            <div id="contenedor" class="cards row my-3 gap-3 justify-content-center"></div>
-
-            <a href="#" class="d-flex justify-content-end"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
         </main>
         <footer class="div_footer container-fluid">
             <div class="navbar-nav flex-row justify-content-around align-items-center ">
                 <a class="nav-link col-2 col-md-1" href="https://www.instagram.com/" target="_blank"
-                    rel="noopener noreferrerr"><img src="./images/instagram.png" class="img object-fit-contain" alt="instagramPage">
+                    rel="noopener noreferrerr"><img src="./images/instagram.png" class="img object-fit-contain"
+                        alt="instagramPage">
                 </a>
-                <a class="nav-link col-2 col-md-1" href="https://about.meta.com/ltam/technologies/facebook-app/" target="_blank"
-                    rel="noopener noreferrerr"><img src="./images/facebook.png" class="img object-fit-contain" alt="faceBookPage">
+                <a class="nav-link col-2 col-md-1" href="https://about.meta.com/ltam/technologies/facebook-app/"
+                    target="_blank" rel="noopener noreferrerr"><img src="./images/facebook.png"
+                        class="img object-fit-contain" alt="faceBookPage">
                 </a>
                 <a class="nav-link col-2 col-md-1" aria-current="page" href="https://www.whatsapp.com/" target="_blank"
-                    rel="noopener noreferrerr"><img src="./images/whatsapp.png" class="img object-fit-contain" alt="whatsAppPage">
+                    rel="noopener noreferrerr"><img src="./images/whatsapp.png" class="img object-fit-contain"
+                        alt="whatsAppPage">
                 </a>
                 <p class="p text-center col-4 col-md-6">Created by<br>Alexander López &copy;<br>CoHort-RappiV</p>
-                <a href="https://mindhubweb.com/" class="col-2 col-md-1" target="_blank" rel="noopener noreferrerr"><img class="img_footer object-fit-contain"
-                        src="./images/Mindhub-white-logo.png" alt="logo-mindHub">
+                <a href="https://mindhubweb.com/" class="col-2 col-md-1" target="_blank" rel="noopener noreferrerr"><img
+                        class="img_footer object-fit-contain" src="./images/Mindhub-white-logo.png" alt="logo-mindHub">
                 </a>
             </div>
         </footer>
@@ -144,3 +154,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

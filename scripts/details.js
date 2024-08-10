@@ -195,8 +195,6 @@ const data = {
     ],
 };
 
-
-
 const url = window.location.search;
 const urlObjeto = new URLSearchParams(url);
 
@@ -210,23 +208,24 @@ if (eventId) {
     if (event) {
         const cardContainer = document.getElementById("card-container"); // Asegúrate de que tienes un contenedor con este id en tu HTML
         const cardContent = document.createElement("div");
-        cardContent.className = "tarjeta";
-
+        cardContent.className = "card2 d-flex";
         cardContent.innerHTML = `
-        <div class="row tarjeta">
-            <div class="col-md-4">
-                <img class="card-img" src="${event.image}" alt="${event.name}">
+        <div class="row align-items-center">
+            <div class="col-md-4 col-12 mb-3 mb-md-0">
+                <img class="img-fluid object-fit-cover img_card_detail" src="${event.image}" alt="${event.name}">
             </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="name d-card">${event.name}</h5>
-                    <p class="date d-card">${event.date}</p>
-                    <p class="description d-card">${event.description}</p>
-                    <p class="category d-card">${event.category}</p>
-                    <p class="place d-card">${event.place}</p>
-                    <p class="capacity d-card">Capacity: ${event.capacity}</p>
-                    <p class="estimate d-card">Estimate: ${event.estimate ? event.estimate : 'N/A'}</p>
-                    <p class="price d-card">Price: ${event.price} $</p>
+            <div class="col-md-8 col-12">
+                <div class="card-body container-fluid">
+                    <h4 class="name d-card pb-2"> ${event.name}</h4>
+                    <ul class="list-group list-group-flush rounded bg-success-subtle flex-grow-1">                        
+                        <li class="list-group-item rounded"><span class="fw-bold">Date: </span>${event.date}</li>
+                        <li class="list-group-item rounded"><span class="fw-bold">Description: </span>${event.description}</li>
+                        <li class="list-group-item rounded"><span class="fw-bold">Category: </span>${event.category}</li>
+                        <li class="list-group-item rounded"><span class="fw-bold">Place: </span>${event.place}</li>
+                        <li class="list-group-item rounded"><span class="fw-bold">Capacity: </span>${event.capacity}</li>
+                        <li class="list-group-item rounded"><span class="fw-bold">Assistance: </span>${event.assistance} people</li>
+                        <li class="list-group-item rounded"><span class="fw-bold">Price: </span>${event.price} $</li>
+                    </ul>
                 </div>
             </div>
         </div>

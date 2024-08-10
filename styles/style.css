@@ -16,13 +16,6 @@
     height: 30vh;
 }
 
-.card {
-    background-color: #9af5de;
-    border: 2px solid #125d54;
-    border-radius: 25px;
-    height:18rem;
-}
-
 .card-img-top {
     margin-top: 10px;
     height: 45%;
@@ -37,15 +30,27 @@
     border-radius: 13px 13px 0 0 ;
     object-fit: cover;
     border-bottom: 2px solid rgba(20, 48, 42, 0.6);
-
 }
-
 
 .cards {
     width: 90%;
 }
 
-.tarjeta {
+.card2 {
+    border-radius: 16px;
+}
+
+.img_card_detail {
+    border-radius: 13px;
+    height: 70vh;
+    padding: none;
+}
+
+.list-group-item {
+    background-color: rgba(95, 233, 202, 0.6);
+}
+
+.card {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -67,9 +72,6 @@
 .card-body {
     display: flex;
     flex-direction: column;
-}
-
-.card-body {
     height: 20%;
 }
 
@@ -114,6 +116,9 @@
     margin: 6px;
 }
 
+.btn-outline-secondary:hover {
+    background-color: #107566;
+}
 
 th {
     background-color: black;
@@ -139,6 +144,16 @@ tr, td {
     color: #0d554e;
 }
 
+.div_arrow {
+    display: flex;
+    position: sticky;
+    top: 75%;
+    right: 20;
+    z-index: 2;
+    justify-content: flex-end;
+    margin-left: 18rem;
+}
+
 .nav-link {
     height: 8vh;
     font-size: 16px;
@@ -158,6 +173,13 @@ tr, td {
 
     .img-logo {
         width: 10%;
+    }
+
+    .nav-link:hover {
+        background-color: #469c92;
+        color: aliceblue;
+        border-radius: 15px;
+        border: 2px solid #84f5e2;
     }
 }
 

@@ -109,10 +109,18 @@
                 </button>
             </section>
 
-            <div id="inputs" class="inputs container-fluid flex-column d-flex mb-3 mt-3 w-50"></div>    
-            <input type="text" id="search" placeholder="Search for events." class="form-control-lg mb-3 w-50">
-            <div id="contenedor" class="cards row my-3 gap-3 justify-content-center"></div>
-            <a href="#" class="d-flex p-3 justify-content-end"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
+            <div class="d-flex row px-4 justify-content-center pt-2 col col-sm-10">
+                <div id="inputs" class="d-flex flex-wrap gap-1 col-sm-10 align-items-center"></div>
+                <div class="d-flex justify-content-center align-items-center col-md-4 col-sm-12">
+                    <input type="text" id="search" placeholder="Search for events."
+                        class="form-control border-success border-2 m-2 col-md-8 ">
+                    <button class="btn btn-outline-secondary border-success border-2 col-md-2 col-sm-auto" type="button" id="searchButton">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <a href="#" class="div_arrow"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
+            <div id="card-container" class="cards row my-3 gap-3 justify-content-center"></div>
         </main>
         <footer class="div_footer container-fluid">
             <div class="navbar-nav flex-row justify-content-around align-items-center ">
