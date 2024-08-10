@@ -44,6 +44,7 @@
     border-radius: 13px;
     height: 55vh;
     padding: none;
+    border: 2px solid rgba(20, 48, 42, 0.6);
 }
 
 .list-group-item {
