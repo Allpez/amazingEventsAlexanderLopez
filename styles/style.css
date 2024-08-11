@@ -42,7 +42,7 @@
 
 .img_card_detail {
     border-radius: 13px;
-    height: 55vh;
+    height: 60vh;
     padding: none;
     border: 2px solid rgba(20, 48, 42, 0.6);
 }
@@ -111,14 +111,31 @@
     height: 250px;
 }
 
+.div_inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.div_search {
+    margin-top: 10px;
+}
+
+.btn_search, .search, .form-check-input {
+    border: 2px solid green;
+    border-radius: 8px;
+}
+
 .p {
     color: #107566;
     font-size: 0.7rem;
     margin: 6px;
 }
 
-.btn-outline-secondary:hover {
+.btn_search:hover {
     background-color: #107566;
+    color: white;
 }
 
 th {
@@ -146,13 +163,12 @@ tr, td {
 }
 
 .div_arrow {
-    display: flex;
-    position: sticky;
-    top: 75%;
-    right: 20;
+    position: fixed;
+    top: 74%;
     z-index: 2;
     justify-content: flex-end;
-    margin-left: 18rem;
+    margin-left: 17rem;
+    display: none;
 }
 
 .nav-link {
@@ -171,11 +187,9 @@ tr, td {
     .arrow {
         display: none;
     }
-
     .img-logo {
         width: 10%;
     }
-
     .nav-link:hover {
         background-color: #469c92;
         color: aliceblue;
@@ -205,6 +219,10 @@ tr, td {
     .card {
         height:20rem;
     }
+
+    .img_card_detail {
+        height: 65vh;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -223,6 +241,85 @@ tr, td {
         width: 109%;
         height: 25vh;
     }
-    
+
+    .img_card_detail {
+        height: 60vh;
+    }
+}
+
+@media only screen and (min-width: 577px) {
+    .div_inputs {
+        display: flex;
+        flex-direction: row;
+        width: 98%;
+        justify-content: center;
+    }
+
+    .inputs {
+        width: 150%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .div_search {
+        display: flex;
+        width: 30%;
+    }
+
+    .p_check {
+        color: #107566;
+        font-size: 0.7rem;
+        margin: 5px;
+        }
+
+    .search {
+        display: flex;
+        width: 100%;
+    }
+
+    .form-check {
+        display: flex;
+        padding-left: 4%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .div_inputs {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .inputs {
+        width: 150%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .p_check {
+        font-size: 0.9em;
+    }
+
+    .div_search {
+        display: flex;
+        width: 30%;
+        margin-right: 30px;
+    }
+
+    .search {
+        display: flex;
+        width: 80%;
+    }
+
+    .form-check {
+        padding-left: 2.5em;
+    }
+
+    .img_card_detail {
+        height: 70vh;
+    }
+
 }
 

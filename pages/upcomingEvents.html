@@ -78,15 +78,6 @@
                             </div>
                         </div>
                     </a>
-                    <a href="./details.html">
-                        <div class="carousel-item">
-                            <img src="../images/music_concert.jpg" class="d-block img_carousel w-100 object-fit-cover"
-                                alt="banner_details">
-                            <div class="carousel-caption d-sm-block col-6">
-                                <h5 class="h5">DETAILS</h5>
-                            </div>
-                        </div>
-                    </a>
                     <a href="./pages/stats.html">
                         <div class="carousel-item">
                             <img src="../images/optional_banner_5.jpg" class="d-block img_carousel w-100 object-fit-cover"
@@ -110,17 +101,18 @@
                 </button>
             </section>
 
-            <div class="d-flex row px-4 justify-content-center pt-2 col col-sm-10">
-                <div id="inputs" class="d-flex flex-wrap gap-1 col-sm-10 align-items-center"></div>
-                <div class="d-flex justify-content-center align-items-center col-md-4 col-sm-12">
-                    <input type="text" id="search" placeholder="Search for events."
-                        class="form-control border-success border-2 m-2 col-md-8 ">
-                    <button class="btn btn-outline-secondary border-success border-2 col-md-2 col-sm-auto" type="button" id="searchButton">
+            <div class="div_inputs">
+                <div id="inputs" class="inputs"></div>
+                <div class="div_search">
+                    <input type="text" id="search" placeholder="Search for events." class="search">
+                    <button class="btn_search" type="button" id="searchButton">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
             </div>
-            <a href="#" class="div_arrow"><i class="bi bi-arrow-up-circle-fill arrow"></i></a>
+            <a href="#" id="arrow" class="div_arrow">
+                <i class="bi bi-arrow-up-circle-fill arrow"></i>
+            </a>
             <div id="card-container" class="cards row my-3 gap-3 justify-content-center"></div>
         </main>
         <footer class="div_footer container-fluid">

@@ -211,7 +211,7 @@ if (eventId) {
         cardContent.className = "card2 d-flex";
         cardContent.innerHTML = `
         <div class="row align-items-center">
-            <div class="col-md-4 col-12 mb-3 mb-md-0">
+            <div class="col-md-4 col-12 mb-3 mb-md-0 d-flex justify-content-center">
                 <img class="img-fluid object-fit-cover img_card_detail" src="${event.image}" alt="${event.name}">
             </div>
             <div class="col-md-8 col-12">

@@ -199,6 +199,7 @@ const cardContainer = document.getElementById("card-container");
 const checkboxContainer = document.getElementById("inputs");
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("searchButton");
+const arrow = document.getElementById("arrow");
 
 // Función para crear los checkboxes de categorías
 function createCategoryCheckboxes() {
@@ -210,7 +211,7 @@ function createCategoryCheckboxes() {
         checkbox.className = 'form-check';
         checkbox.innerHTML = `
             <input class="form-check-input" type="checkbox" value="${category}" id="${category}">
-            <label class="form-check-label" for="${category}"><span class="p">${category}</span></label>
+            <label class="form-check-label" for="${category}"><span class="p_check">${category}</span></label>
         `;
         checkboxContainer.appendChild(checkbox);
     });
@@ -240,29 +241,37 @@ function filterEvents() {
     });
 
     // Mostrar los eventos filtrados
-        if (filteredEvents.length === 0) {
-            const noResultsMessage = document.createElement('div');
-            noResultsMessage.className = 'no-results-message text-center';
-            noResultsMessage.innerHTML = '<H2 class"text-success">No se encontraron resultados.</H2><p class"text-success-emphasis">Por favor intenta con una nueva busqueda.</p>';
-            cardContainer.appendChild(noResultsMessage);
-    }else{
+    if (filteredEvents.length === 0) {
+        const noResultsMessage = document.createElement('div');
+        noResultsMessage.className = 'no-results-message text-center';
+        noResultsMessage.innerHTML = '<H2 class"text-success">No se encontraron resultados.</H2><p class"text-success-emphasis">Por favor intenta con una nueva busqueda.</p>';
+        cardContainer.appendChild(noResultsMessage);
+    } else {
         filteredEvents.forEach(event => {
             let card = document.createElement("div");
             card.className = "card";
             card.innerHTML = `
-            <img class="card-img" src="${event.image}">
-            <div class="card-body p-1 mt-2">
-            <h5 class="card-title">${event.name}</h5>
-            <p class="card-text">${event.description}</p>
-            <div class="d-flex justify-content-between align-items-center mt-auto">
-            <p>${event.price} $</p>
-            <a href="./pages/details.html?id=${event._id}" class="btn button_card">Details</a>
-            </div>
-            </div>`;
+                <img class="card-img" src="${event.image}">
+                <div class="card-body p-1 mt-2">
+                    <h5 class="card-title">${event.name}</h5>
+                    <p class="card-text">${event.description}</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <p>${event.price} $</p>
+                        <a href="./pages/details.html?id=${event._id}" class="btn button_card">Details</a>
+                    </div>
+                </div>`;
             cardContainer.appendChild(card);
         });
     }
 }
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) { // Mostrar la flecha si has hecho scroll más de 500px
+        arrow.style.display = 'block';
+    } else {
+        arrow.style.display = 'none';
+    }
+});
 
 // Añadir el evento de entrada al boton de busqueda.
 searchButton.addEventListener('click', filterEvents);

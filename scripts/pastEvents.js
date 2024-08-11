@@ -195,11 +195,11 @@ const data = {
     ],
 };
 
-
 const cardContainer = document.getElementById("card-container");
 const checkboxContainer = document.getElementById("inputs");
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("searchButton");
+const arrow = document.getElementById("arrow");
 
 // Función para crear los checkboxes de categorías
 function createCategoryCheckboxes() {
@@ -211,7 +211,7 @@ function createCategoryCheckboxes() {
         checkbox.className = 'form-check';
         checkbox.innerHTML = `
             <input class="form-check-input" type="checkbox" value="${category}" id="${category}">
-            <label class="form-check-label" for="${category}"><span class="p">${category}</span></label>
+            <label class="form-check-label" for="${category}"><span class="p_check">${category}</span></label>
         `;
         checkboxContainer.appendChild(checkbox);
     });
@@ -265,6 +265,14 @@ function filterEvents() {
         });
     }
 }
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) { // Mostrar la flecha si has hecho scroll más de 500px
+        arrow.style.display = 'block';
+    } else {
+        arrow.style.display = 'none';
+    }
+});
 
 // Añadir el evento de entrada al boton de busqueda.
 searchButton.addEventListener('click', filterEvents);
