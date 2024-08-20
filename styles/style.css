@@ -84,6 +84,7 @@
     display: flex;
     flex-direction: column;
     height: 20%;
+    justify-content: space-between;
 }
 
 .h5 {
@@ -96,7 +97,6 @@
 .button_card {
     background-color: #125d54;
     color: #ffffff;
-    margin-bottom: 20px;
 }
 .img {
     width: 60%;
@@ -173,7 +173,7 @@ tr, td {
 }
 
 .arrow {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #0d554e;
 }
 
@@ -182,7 +182,7 @@ tr, td {
     bottom: 15%;
     z-index: 2;
     justify-content: flex-end;
-    margin-left: 17.8rem;
+    margin-left: 16.9rem;
     display: none;
 }
 
@@ -195,7 +195,7 @@ tr, td {
 
 .div_footer {
     background-color: #5fe9ca;
-    max-height: 30vh;
+    height: 30vh;
 }
 
 @media only screen and (min-width: 579px) {
@@ -232,7 +232,7 @@ tr, td {
     } */
   
     .card {
-        height:20rem;
+        min-height:20rem;
     }
 
     .img_card_detail {
@@ -243,15 +243,9 @@ tr, td {
         width: 70%;
     }
 
-    .div_inputs {
+    /* .div_inputs {
         margin-left: 50px;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    .card {
-        min-height: 24rem;
-    }
+    } */
 }
 
 @media only screen and (min-width: 577px) {
@@ -259,7 +253,7 @@ tr, td {
         display: flex;
         flex-direction: row;
         width: 98%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .inputs {
@@ -276,7 +270,7 @@ tr, td {
         color: #107566;
         font-size: 0.7rem;
         margin: 5px;
-        }
+    }
 
     .search {
         display: flex;
@@ -297,13 +291,13 @@ tr, td {
     }
 
     .inputs {
-        width: 150%;
+        width: 90%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .p_check {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     .div_search {
@@ -340,9 +334,4 @@ tr, td {
     .img_card_detail {
         height: 60vh;
     }
-
-    .div_inputs {
-        margin-left: -75px; 
-    }
-
 }

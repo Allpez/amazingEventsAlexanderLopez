@@ -257,8 +257,8 @@ function filterEvents() {
             <div class="card-body p-1 mt-2">
             <h5 class="card-title">${event.name}</h5>
             <p class="card-text">${event.description}</p>
-            <div class="d-flex justify-content-between align-items-center mt-auto">
-            <p>${event.price} $</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+            <p class="m-0">${event.price} $</p>
             <a href="./details.html?id=${event._id}" class="btn button_card">Details</a>
             </div>
             </div>`;
