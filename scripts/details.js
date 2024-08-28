@@ -203,7 +203,7 @@ if (eventId) {
     const event = data.events.find(e => e._id === eventId);
 
     if (event) {
-        const cardContainer = document.getElementById("card-container"); // Asegúrate de que tienes un contenedor con este id en tu HTML
+        const cardContainer = document.getElementById("card-container");
         const cardContent = document.createElement("div");
         cardContent.className = "card2 d-flex";
         cardContent.innerHTML = `
@@ -213,7 +213,7 @@ if (eventId) {
             </div>
             <div class="col-md-7 col-12">
                 <div class="card-body container-fluid">
-                    <h4 class="name d-card pb-2"> ${event.name}</h4>
+                    <h4 class="name d-card pb-2 rounded bg-success"> ${event.name}</h4>
                     <ul class="list-group list-group-flush rounded bg-success-subtle flex-grow-1">                        
                         <li class="list-group-item rounded"><span class="fw-bold">Date: </span>${event.date}</li>
                         <li class="list-group-item rounded"><span class="fw-bold">Description: </span>${event.description}</li>

@@ -52,7 +52,6 @@
 
 .img_card_detail {
     border-radius: 13px;
-    height: 60vh;
     padding: none;
     border: 2px solid rgba(20, 48, 42, 0.6);
 }
@@ -195,7 +194,7 @@ tr, td {
 
 .div_footer {
     background-color: #5fe9ca;
-    height: 30vh;
+    height: 10vh;
 }
 
 @media only screen and (min-width: 579px) {
@@ -243,9 +242,9 @@ tr, td {
         width: 70%;
     }
 
-    /* .div_inputs {
-        margin-left: 50px;
-    } */
+    .img_card_detail {
+        height: 70vh;
+    }
 }
 
 @media only screen and (min-width: 577px) {
@@ -316,9 +315,16 @@ tr, td {
     }
 
     .img_card_detail {
-        height: 57vh;
+        height: 70vh;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+    .img_card_detail {
+        height: 60vh;
+    }
+}
+
 
 @media only screen and (min-width: 1440px) {
     .tarjeta {
@@ -335,3 +341,4 @@ tr, td {
         height: 60vh;
     }
 }
+
