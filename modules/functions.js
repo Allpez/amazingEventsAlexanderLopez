@@ -81,13 +81,6 @@ export function createCards(cards, upComing = false, past = false) {
             let card = document.createElement("div");
             card.className = "card";
 
-            let detailsLink;
-            if (!upComing && !past) {
-                detailsLink = `<a href="./pages/details.html?id=${event._id}" class="btn button_card">Details</a>`;
-            } else {
-                detailsLink = `<a href="../pages/details.html?id=${event._id}" class="btn button_card">Details</a>`;
-            }
-
             card.innerHTML = `
             <img class="card-img" src="${event.image}">
                 <div class="card-body p-1 mt-2">
@@ -95,7 +88,7 @@ export function createCards(cards, upComing = false, past = false) {
                     <p class="card-text">${event.description}</p>
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <p class="m-0">${event.price} $</p>
-                        ${detailsLink}
+                        <a href="../pages/details.html?id=${event._id}" class="btn button_card">Details</a>
                     </div>
                 </div>`;
             cardContainer.appendChild(card);
