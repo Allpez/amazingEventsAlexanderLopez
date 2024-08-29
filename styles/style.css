@@ -171,10 +171,16 @@ tr, td {
     text-align: center;
 }
 
+.form-check-label {
+    user-select: none;
+}
+
 .arrow {
     font-size: 3rem;
     color: #0d554e;
 }
+
+
 
 .div_arrow {
     position: fixed;
@@ -236,10 +242,6 @@ tr, td {
 
     .img_card_detail {
         height: 60vh;
-    }
-
-    .search {
-        width: 70%;
     }
 
     .img_card_detail {
