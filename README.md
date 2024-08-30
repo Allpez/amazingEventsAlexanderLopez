@@ -1,45 +1,51 @@
 # amazingEventsAlexanderLopez
 
-En este repositorio se encuentra la pagina en desarrollo "amazingEvents"-SPRINT1 del nivel #2 de FRONT-ENT, creada con HTML y BOOTSTRAP, aplicando un poco de estilo con CSS.
+En este repositorio se encuentra la pagina en desarrollo "amazingEvents"-SPRINT4 del nivel #2 de FRONT-ENT, creada con HTML, CSS, BOOTSTRAP Y JAVASCRIPT.
 
-  Requerimientos para el SPRINT1
+  Requerimientos para el SPRINT2
 
-Step by step Amazing Events
+Step by Step
 
-You’ll find here the steps to complete your first sprint. 
-With each sprint you’ll be progressively adding functionality to the site.
+ 
 
-❗Remember that the style and palette of the site is up to you and that you can make any changes you want in design (as long as the content remains complete).
+You’ll find here the steps to complete your fourth sprint.
+Take into consideration the feedback you received in your previous sprint.
 
-For your first sprint you’ll need your knowledge in HTML & CSS, in addition to Bootstrap.                                                                                                         
+For this Sprint you’ll need the content given in these workshops:
+_Asynchronism (specially fetch)
+_ECMA 6 (specially import & export)
 
-1st Sprint
+4th Sprint
 
-◾You’ll create 6 html files for:
--Home
--Past Events
--Upcoming Events
--Contact
--Stats
--Details
+◾You’ll need to create a “modules” folder
 
-◾Assign a corresponding “title” to each of the pages and add a favicon to each html
+◾You’ll have to create a functions.js file and take all your functions there
 
-◾Remember when creating the site that the Details page won't be a part of the navbar, instead each event card must take you to it.
+◾Export your file and import the needed functions in each js file
 
-◾Complete each page with its content (as shown in the wireframe)
+◾Create a new js file for the stats page
 
-◾You can style your page with your personal CSS file, Bootstrap or a combination of both.
-(TIP: if you use Bootstrap make sure that the document maintains the correct semantic)
+◾You’ll have to delete the data.js file from your project and take the information from the given API with fetch()
 
-◾Once you’re done, create a repository in GitHub “AmazingEvents(Name)LastName”
+◾You’ll fill the tables in stats with the following:
 
-◾Connect your project with the repository
+1st Table
+-Event with highest percentage of assistance
+-Event with the lowest percentage of assistance
+-Event with the highest capacity
 
-◾Add your files to the staging area (git add . or git add file-name)
+For the first two you’ll have to use past events (as we are talking about assistance)
 
-◾Add them to your local repository (git commit –m “description”)
+2nd Table
+Revenues and percentage of estimated assistance by category (upcoming events)
 
-◾Add them to your remote repository (git push origin nameOfBranch)
+3rd Table
+Revenues and percentage of assistance by category (past events)
+
+ 
+
+◾Once you’re done with your work add, commit and push your project to the branch (sprint4)
 
 ◾Submit your sprint leaving the link to your GitHub repository.
+
+https://aulamindhub.github.io/amazing-api/events.json
