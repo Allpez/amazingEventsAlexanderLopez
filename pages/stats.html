@@ -28,13 +28,13 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse col-sm-9 justify-content-end" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
+                        <nav class="navbar-nav">
                             <a class="nav-link" href="/index.html">Home</a>
                             <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
                             <a class="nav-link" href="./pastEventes.html">Past Events</a>
                             <a class="nav-link" href="../pages/contact.html">Contact</a>
                             <a class="nav-link active" aria-current="page" href="#">Stats</a>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </nav>
@@ -44,8 +44,8 @@
                 <div class="carousel-inner">
                     <a href="/index.html">
                         <div class="carousel-item">
-                            <img src="../images/optional_banner_1.jpg" class="d-block img_carousel w-100 object-fit-cover"
-                                alt="banner_home">
+                            <img src="../images/optional_banner_1.jpg"
+                                class="d-block img_carousel w-100 object-fit-cover" alt="banner_home">
                             <div class="carousel-caption d-sm-block col-6">
                                 <h5 class="h5 text-center">HOME</h5>
                             </div>
@@ -53,8 +53,8 @@
                     </a>
                     <a href="/pages/upcomingEvents.html">
                         <div class="carousel-item">
-                            <img src="../images/optional_banner_2.jpg" class="d-block img_carousel w-100 object-fit-cover"
-                                alt="banner_upcomingEvents">
+                            <img src="../images/optional_banner_2.jpg"
+                                class="d-block img_carousel w-100 object-fit-cover" alt="banner_upcomingEvents">
                             <div class="carousel-caption d-sm-block col-6">
                                 <h5 class="h5">UPCOMING EVENTS</h5>
                             </div>
@@ -62,8 +62,8 @@
                     </a>
                     <a href="/pages/pastEventes.html">
                         <div class="carousel-item">
-                            <img src="../images/optional_banner_3.jpg" class="d-block img_carousel w-100 object-fit-cover"
-                                alt="banner_1">
+                            <img src="../images/optional_banner_3.jpg"
+                                class="d-block img_carousel w-100 object-fit-cover" alt="banner_1">
                             <div class="carousel-caption d-sm-block col-6">
                                 <h5 class="h5">PAST EVENTS</h5>
                             </div>
@@ -71,8 +71,8 @@
                     </a>
                     <a href="/pages/contact.html">
                         <div class="carousel-item">
-                            <img src="../images/optional_banner_4.jpg" class="d-block img_carousel w-100 object-fit-cover"
-                                alt="banner_contact">
+                            <img src="../images/optional_banner_4.jpg"
+                                class="d-block img_carousel w-100 object-fit-cover" alt="banner_contact">
                             <div class="carousel-caption d-sm-block col-6">
                                 <h5 class="h5">CONTACT</h5>
                             </div>
@@ -80,8 +80,8 @@
                     </a>
                     <a href="#">
                         <div class="carousel-item  active">
-                            <img src="../images/optional_banner_5.jpg" class="d-block img_carousel w-100 object-fit-cover"
-                                alt="banner_stats">
+                            <img src="../images/optional_banner_5.jpg"
+                                class="d-block img_carousel w-100 object-fit-cover" alt="banner_stats">
                             <div class="carousel-caption d-sm-block col-6">
                                 <h5 class="h5">Stats</h5>
                             </div>
@@ -99,68 +99,71 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <table class="table w-75 container mt-4 text-center tab  border-black">
-                <thead>
-                    <tr>
-                        <th colspan="3" class="bg-secondary">Events Statistics</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Eventes with highest % of assistance</td>
-                        <td>Eventes with lowest % of assistance</td>
-                        <td>Eventes with larger capacity</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                    </tr>
-                    <tr>
-                        <th colspan="3" class="bg-secondary">Upcomin events statistics by category</th>
-                    </tr>
-                </tbody>
-                <thead>
-                    <tr>
-                        <td>Categories</td>
-                        <td>Revenues</td>
-                        <td>Percntage of assistance</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                    </tr>
-                    <tr>
-                        <th colspan="3" class="bg-secondary">Upcomin events statistics by category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Categories</td>
-                        <td>>Revenues</td>
-                        <td>Percntage of assistance</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <table id="tableContainer" class="table w-75 container mt-4 text-center tab  border-black">
+                    <!-- <thead>
+                        <tr>
+                            <th colspan="3" class="bg-secondary">Events Statistics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Eventes with highest % of assistance</td>
+                            <td>Eventes with lowest % of assistance</td>
+                            <td>Eventes with larger capacity</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="bg-secondary">Upcomin events statistics by category</th>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <td>Categories</td>
+                            <td>Revenues</td>
+                            <td>Percntage of assistance</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="bg-secondary">Upcomin events statistics by category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Categories</td>
+                            <td>>Revenues</td>
+                            <td>Percntage of assistance</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                        </tr>
+                    </tbody> -->
+                </table>
+            </div>
         </main>
         <footer class="div_footer container-fluid">
             <div class="navbar-nav flex-row justify-content-around align-items-center ">
                 <a class="nav-link icon col-2 col-md-1" href="https://www.instagram.com/" target="_blank"
-                    rel="noopener noreferrerr"><img src="/images/instagram.png" class="img object-fit-contain" alt="instagramPage">
+                    rel="noopener noreferrerr"><img src="/images/instagram.png" class="img object-fit-contain"
+                        alt="instagramPage">
                 </a>
                 <a class="nav-link icon col-2 col-md-1" href="https://about.meta.com/ltam/technologies/facebook-app/"
-                    target="_blank" rel="noopener noreferrerr"><img src="/images/facebook.png" class="img object-fit-contain"
-                        alt="faceBookPage">
+                    target="_blank" rel="noopener noreferrerr"><img src="/images/facebook.png"
+                        class="img object-fit-contain" alt="faceBookPage">
                 </a>
                 <a class="nav-link icon col-2 col-md-1" aria-current="page" href="https://www.whatsapp.com/"
-                    target="_blank" rel="noopener noreferrerr"><img src="/images/whatsapp.png" class="img object-fit-contain"
-                        alt="whatsAppPage">
+                    target="_blank" rel="noopener noreferrerr"><img src="/images/whatsapp.png"
+                        class="img object-fit-contain" alt="whatsAppPage">
                 </a>
                 <p class="p text-center col-4 col-md-6">Created by<br>Alexander López &copy;<br>CoHort-RappiV</p>
                 <a href="https://mindhubweb.com/" class="col-2 col-md-1" target="_blank" rel="noopener noreferrerr"><img
@@ -170,7 +173,7 @@
         </footer>
     </div>
 
-    <script src="./scripts/main.js"></script>
+    <script src="../scripts/stats.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

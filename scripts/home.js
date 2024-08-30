@@ -1,4 +1,4 @@
-import { loadEvents,  } from "../modules/functions.js";
+import { loadEvents, initialize } from "../modules/functions.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     loadEvents();

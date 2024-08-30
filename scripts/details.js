@@ -1,5 +1,3 @@
-// import { loadEvents } from "../modules/functions.js";
-
 const urlParam = window.location.search;
 const urlObjeto = new URLSearchParams(urlParam);
 const eventId = urlObjeto.get('id');
@@ -17,7 +15,6 @@ function loadEvents() {
         })
         .catch(error => {
             console.error("Error al obtener los datos:", error);
-            throw error;
         });
 }
 // Crear tarjeta de detalles
@@ -53,7 +50,7 @@ function createCard(event) {
 function initialize() {
     loadEvents().then(() => {
         if (eventId) {
-            const event = events.find(e => e._id === parseInt(eventId, 10)); // Asegúrate de comparar con el tipo correcto
+            const event = events.find(e => e._id === parseInt(eventId, 10));
             if (event) {
                 createCard(event);
             } else {
