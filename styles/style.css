@@ -34,16 +34,11 @@
 }
 
 .card-img {
-    width: 111%;
     height: 30vh;
     align-self: center;
     border-radius: 13px 13px 0 0 ;
     object-fit: cover;
     border-bottom: 2px solid rgba(20, 48, 42, 0.6);
-}
-
-.cards {
-    width: 90%;
 }
 
 .card2 {
@@ -127,16 +122,16 @@
     margin: 10px;
 }
 
-.div_search {
-    margin-top: 10px;
-}
-
 .btn_search, .search, .form-check-input {
     border: 2px solid green;
     border-radius: 8px;
     padding: 0 5px;
 }
 
+.btn:hover {
+    border: 1px solid black;
+    background-color: #8dfcae;
+}
 .p {
     color: #107566;
     font-size: 0.7rem;
@@ -146,17 +141,12 @@
 .btn_search:hover {
     background-color: #107566;
     color: white;
-}
-
-th {
-    background-color: black;
-    border: 2px solid black;
-    border-collapse: collapse;
+    border: 1px solid white;
 }
 
 tr, td {
-    border-collapse: collapse;
-    border: 2px solid black;
+    background-color: rgb(5, 43, 0);
+    border: 2px solid green;
 }
 
 .btn {
@@ -180,8 +170,6 @@ tr, td {
     color: #0d554e;
 }
 
-
-
 .div_arrow {
     position: fixed;
     bottom: 15%;
@@ -200,7 +188,10 @@ tr, td {
 
 .div_footer {
     background-color: #5fe9ca;
-    height: 10vh;
+    min-height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media only screen and (min-width: 579px) {
@@ -227,15 +218,7 @@ tr, td {
 }
 
 @media only screen and (min-width: 768px) {
-    .div_footer {
-        height: 12vh;
-    }
 
-    /* .img_carousel {
-        width: 100rem;
-        height: 40vh;
-    } */
-  
     .card {
         min-height:20rem;
     }
@@ -244,103 +227,25 @@ tr, td {
         height: 60vh;
     }
 
-    .img_card_detail {
-        height: 70vh;
-    }
 }
 
 @media only screen and (min-width: 577px) {
-    .div_inputs {
-        display: flex;
-        flex-direction: row;
-        width: 98%;
-        justify-content: flex-start;
-    }
-
-    .inputs {
-        width: 90%;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .div_search {
-        display: flex;
-        width: 30%;
-    }
-
     .p_check {
         color: #107566;
         font-size: 0.7rem;
-        margin: 5px;
-    }
-
-    .search {
-        display: flex;
-    }
-
-    .form-check {
-        display: flex;
-        padding-left: 4%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .div_inputs {
-        display: flex;
-        flex-direction: row;
-        width: 97%;
-        justify-content: center;
-    }
-
-    .inputs {
-        width: 90%;
-        display: flex;
-        justify-content: flex-start;
-    }
-
     .p_check {
         font-size: 0.9rem;
     }
-
-    .div_search {
-        display: flex;
-        width: 30%;
-        margin-right: 70px;
-    }
-
-    .search {
-        display: flex;
-        width: 80%;
-    }
-
-    .form-check {
-        padding-left: 2.5em;
-    }
-
-    .img_card_detail {
-        height: 70vh;
-    }
 }
-
-@media only screen and (min-width: 1200px) {
-    .img_card_detail {
-        height: 60vh;
-    }
-}
-
 
 @media only screen and (min-width: 1440px) {
     .tarjeta {
         width: 300px;
         height: 54vh;
-    }
-
-    .card-img {
-        width: 112%;
-        height: 25vh;
-    }
-
-    .img_card_detail {
-        height: 60vh;
     }
 }
 

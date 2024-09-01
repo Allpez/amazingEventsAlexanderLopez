@@ -17,7 +17,7 @@
 
 <body>
     <div class="d-flex min-vh-100 flex-column layout">
-        <header class="div_header container-fluid color div_header">
+        <header class="div_header container-fluid color">
             <nav class="navbar container-fluid row navbar-expand-sm">
                 <a class="d-flex justify-content-center col col-sm-3" href="/index.html"><img class="img-logo w-75"
                         src="../images/amazing_brand.png" alt="logoA_Events"></a>
@@ -99,11 +99,11 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </section>
-            <div class="div_inputs">
-                <div id="inputs" class="inputs"></div>
-                <div class="div_search">
-                    <input type="text" id="search" placeholder="Search for events." class="search">
-                    <button class="btn_search" type="button" id="searchButton">
+            <div class="div_inputs container row">
+                <div id="inputs" class="inputs row justify-content-between"></div>
+                <div class="div_search div_search d-flex align-items-center justify-content-center gap-2">
+                    <input type="text" id="search" placeholder="Search for events." class="col-5 search d-flex align-items-center justify-content-center px-3">
+                    <button class="btn_search  type="button" id="searchButton">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
@@ -111,22 +111,25 @@
             <a href="#" id="arrow" class="div_arrow">
                 <i class="bi bi-arrow-up-circle-fill arrow"></i>
             </a>
-            <div id="card-container" class="cards row my-3 gap-3 justify-content-center"></div>
+            <div id="card-container" class="row m-3 gap-4 justify-content-center"></div>
         </main>
         <footer class="div_footer container-fluid">
             <div class="navbar-nav flex-row justify-content-around align-items-center ">
-                <a class="nav-link icon col-2 col-md-1" href="https://www.instagram.com/" target="_blank"
-                    rel="noopener noreferrerr"><img src="/images/instagram.png" class="img object-fit-contain" alt="instagramPage">
+                <a class="col-1 col-md-1" href="https://www.instagram.com/" target="_blank"
+                    rel="noopener noreferrerr"><img src="../images/instagram.png" class="img object-fit-contain"
+                        alt="instagramPage">
                 </a>
-                <a class="nav-link icon col-2 col-md-1" href="https://about.meta.com/ltam/technologies/facebook-app/" target="_blank"
-                    rel="noopener noreferrerr"><img src="/images/facebook.png" class="img object-fit-contain" alt="faceBookPage">
+                <a class="col-1 col-md-1" href="https://about.meta.com/ltam/technologies/facebook-app/"
+                    target="_blank" rel="noopener noreferrerr"><img src="../images/facebook.png"
+                        class="img object-fit-contain" alt="faceBookPage">
                 </a>
-                <a class="nav-link icon col-2 col-md-1" aria-current="page" href="https://www.whatsapp.com/" target="_blank"
-                    rel="noopener noreferrerr"><img src="/images/whatsapp.png" class="img object-fit-contain" alt="whatsAppPage">
+                <a class="col-1 col-md-1" aria-current="page" href="https://www.whatsapp.com/" target="_blank"
+                    rel="noopener noreferrerr"><img src="../images/whatsapp.png" class="img object-fit-contain"
+                        alt="whatsAppPage">
                 </a>
-                <p class="p text-center col-4 col-md-6">Created by<br>Alexander López &copy;<br>CoHort-RappiV</p>
-                <a href="https://mindhubweb.com/" class="col-2 col-md-1" target="_blank" rel="noopener noreferrerr"><img class="img_footer object-fit-contain"
-                        src="/images/Mindhub-white-logo.png" alt="logo-mindHub">
+                <p class="p text-center col-4 col-md-7 m-0">Created by Alexander López <br> &copy; CoHort-RappiV</p>
+                <a href="https://mindhubweb.com/" class="col-2 col-md-1" target="_blank" rel="noopener noreferrerr"><img
+                        class="img_footer object-fit-contain" src="../images/Mindhub-white-logo.png" alt="logo-mindHub">
                 </a>
             </div>
         </footer>

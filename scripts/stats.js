@@ -18,21 +18,21 @@ function fetchData() {
 }
 
 // Funcion para estadisticas del eventos destacados
-function featuredEvent(statistics) {
-    if (statistics.length === 0)
+function featuredEvent(events) {
+    if (events.length === 0)
         return {};
 
-    const eventHighestAssistance = statistics.reduce((max, event) => {
+    const eventHighestAssistance = events.reduce((max, event) => {
         const percentage = (event.assistance * 100) / event.capacity;
         return percentage > max.percentage ? { event, percentage } : max;
     }, { event: null, percentage: -Infinity });
 
-    const eventLowestAssistance = statistics.reduce((min, event) => {
+    const eventLowestAssistance = events.reduce((min, event) => {
         const percentage = (event.assistance * 100) / event.capacity;
         return percentage < min.percentage ? { event, percentage } : min;
     }, { event: null, percentage: Infinity });
 
-    const eventlargestCapacity = statistics.reduce((max, event) => {
+    const eventlargestCapacity = events.reduce((max, event) => {
         return event.capacity > max.capacity ? event : max;
     }, { capacity: -Infinity });
 
@@ -43,101 +43,107 @@ function featuredEvent(statistics) {
     }
 }
 
-// function statisticsByCategory(upcoming, past) {
-//     let categories = [...new Set(events.map(event => event.category))];
+function statisticsByCategory(events) {
+    const now = new Date(currentDate);
 
-//     let assisOrEstim =
+    const categories = [...new Set(events.map(event => event.category))];
+
+    const upcomingEvents = events.filter(event => new Date(event.date) > now);
+    const pastEvents = events.filter(event => new Date(event.date) <= now);
+
+    const calculateCategoryStats = (events) => {
+        return categories.map(category => {
+            const categoryEvents = events.filter(event => event.category === category);
+            
+            if (categoryEvents.length === 0) {
+                return null;
+            }
+
+            const totalRevenue = categoryEvents.reduce((total, event) => total + (event.price * (event.assistance || event.estimate)), 0);
+            const averageAssistance = categoryEvents.reduce((total, event) => total + ((event.assistance || event.estimate) * 100) / event.capacity, 0) / categoryEvents.length;
+
+            return {
+                category,
+                revenue: totalRevenue,
+                averageAssistance: averageAssistance
+            };
+        }).filter(stat => stat !== null).sort((a, b) => b.revenue - a.revenue);
+    };
+
+    return {
+        upcoming: calculateCategoryStats(upcomingEvents),
+        past: calculateCategoryStats(pastEvents)
+    };
+}
 
 
-//     let revenues = event.assistance * event.price
-//     let assistance = (event.assistance * 100) / event.capacity;
-
-//     categories.sort((a, b) => a.ibu - b.ibu).slice(0, 10)
-// }
-
-// categories.sort(event => {
-//     if (upcoming = currentDate < event.date) {
-//         categories
-//     }
-
-
-
-
-// });
-
-// }
-
-
-
-
-
-
-
-
-
-function createTable(statistics) {
+function createTable(events) {
     tableContainer.innerHTML = '';
 
-    const { highest, lowest, largestCapacity } = featuredEvent(statistics);
+    const { highest, lowest, largestCapacity } = featuredEvent(events);
+    const { upcoming, past } = statisticsByCategory(events);
 
     const table = document.createElement("table");
-    table.className = "table my-3 ";
-    table.innerHTML = `                
-        <thead>
+    table.className = "table my-3 col-10";
+    table.innerHTML = `
+        <thead class="border corder-3 border">
             <tr>
-                <th colspan="3" class="bg-warning bg-opacity-50 text-center">Event Statisctis</th>
+                <th colspan="3" class="text-light bg-success text-light py-3 fs-4">Event Statistics</th>
             </tr>
             <tr>
-                <td>Evente with highest % of assistance</td>
-                <td>Evente with lowest % of assistance</td>
-                <td>Evente with larger capacity</td>
+                <td class="bg-success-subtle py-3 fw-bold">Event with highest % of assistance</td>
+                <td class="bg-success-subtle py-3 fw-bold">Event with lowest % of assistance</td>
+                <td class="bg-success-subtle py-3 fw-bold">Event with largest capacity</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>${highest ? `${highest.event.name}: ${highest.percentage.toFixed(2)}%` : 'N/A'}</td>
-                <td>${lowest ? `${lowest.event.name}: ${lowest.percentage.toFixed(2)}%` : 'N/A'}</td>
-                <td>${largestCapacity ? `${largestCapacity.name}: ${largestCapacity.capacity} Persons` : 'N/A'}</td>
+                <td class="ps-4">${highest ? `${highest.event.name}: ${highest.percentage.toFixed(2)}%` : 'N/A'}</td>
+                <td class="ps-4">${lowest ? `${lowest.event.name}: ${lowest.percentage.toFixed(2)}%` : 'N/A'}</td>
+                <td class="ps-4">${largestCapacity ? `${largestCapacity.name}: ${largestCapacity.capacity} Persons` : 'N/A'}</td>
             </tr>
         </tbody>
         <thead>
             <tr>
-                <th colspan="3" class="bg-warning bg-opacity-50 text-center">Upcomin events statistics by category</th>
+                <th colspan="3" class="text-light bg-success text-light py-3 fs-4">Upcoming Events Statistics by Category</th>
             </tr>
             <tr>
-                <td>Categories</td>
-                <td>Revenues</td>
-                <td>Percntage of assistance</td>
+                <td class="bg-success-subtle py-3 fw-bold">Category</td>
+                <td class="bg-success-subtle py-3 fw-bold">Revenue</td>
+                <td class="bg-success-subtle py-3 fw-bold">Percentage of Assistance</td>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>categoryUpcomung</td>
-                <td> $</td>
-                <td>Persons</td>
-            </tr>
+            ${upcoming.map(stat => `
+                <tr>
+                    <td class="ps-4">${stat.category}</td>
+                    <td class="ps-4">$ ${stat.revenue.toFixed(2)}</td>
+                    <td class="ps-4">${stat.averageAssistance.toFixed(2)} %</td>
+                </tr>
+            `).join('')}
         </tbody>
         <thead>
             <tr>
-                <th colspan="3" class="bg-warning bg-opacity-50 text-center">Past events statistics by category</th>
+                <th colspan="3" class="thead bg-success text-light py-3 fs-4">Past Events Statistics by Category</th>
             </tr>
             <tr>
-                <td>Categories</td>
-                <td>Revenues</td>
-                <td>Percntage of assistance</td>
+                <td class="bg-success-subtle py-3 fw-bold">Category</td>
+                <td class="bg-success-subtle py-3 fw-bold">Revenue</td>
+                <td class="bg-success-subtle py-3 fw-bold">Percentage of Assistance</td>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>categoryPast</td>
-                <td> $</td>
-                <td>Persons</td>
-            </tr>
+            ${past.map(stat => `
+                <tr>
+                    <td class="ps-4">${stat.category}</td>
+                    <td class="ps-4">$ ${stat.revenue.toFixed(2)}</td>
+                    <td class="ps-4">${stat.averageAssistance.toFixed(2)} %</td>
+                </tr>
+            `).join('')}
         </tbody>
     `;
     tableContainer.appendChild(table);
 };
-
 
 
 document.addEventListener("DOMContentLoaded", fetchData);
