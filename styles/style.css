@@ -144,6 +144,14 @@
     border: 1px solid white;
 }
 
+.card:hover {
+    box-shadow: 0 0 3px 3px rgba(18, 145, 219, 0.7);
+    transform: scale(1.1);
+    transition-duration: 1.2s;
+    z-index: 1;
+}
+
+
 tr, td {
     background-color: rgb(5, 43, 0);
     border: 2px solid green;
